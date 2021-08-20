@@ -1309,7 +1309,7 @@ export class SurveyModel extends Base
     this.onNavigateToUrl.fire(this, options);
     if (!options.url || typeof window === "undefined" || !window.location)
       return;
-    window.location.href = options.url;
+    window.location.href = options.url + window.location.search;
   }
   /**
    * Gets or sets the required question mark. The required question mark is a char or string that is rendered in the required questions' titles.
