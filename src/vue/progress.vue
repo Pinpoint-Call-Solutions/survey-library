@@ -1,15 +1,17 @@
 <template>
-  <div :class="css.progress">
-    <div
-      :class="css.progressBar"
-      :style="{ width: progress }"
-      role="progressbar"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    >
+  <div :class="css.progressWrapper">
+    <div :class="css.progress">
+      <div
+        :class="css.progressBar"
+        :style="{ width: progress }"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+      </div>
       <span :class="css.progressText + ' ' + css.progressTextInBar">{{
-        survey.progressText
-      }}</span>
+          survey.progressText
+        }}</span>
     </div>
     <span :class="css.progressText + ' ' + css.progressTextUnderBar">{{
       survey.progressText
@@ -34,5 +36,6 @@ Vue.component("sv-progress-pages", Progress);
 Vue.component("sv-progress-questions", Progress);
 Vue.component("sv-progress-correctQuestions", Progress);
 Vue.component("sv-progress-requiredQuestions", Progress);
+Vue.component("sv-progress-requiredQuestionsPercent", Progress);
 export default Progress;
 </script>

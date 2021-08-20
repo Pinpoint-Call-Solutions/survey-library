@@ -3788,6 +3788,7 @@ export class SurveyModel extends Base
     if (
       type === "questions" ||
       type === "requiredquestions" ||
+      type === "requiredquestionspercent" ||
       type === "correctquestions" ||
       !this.onProgressText.isEmpty
     ) {
@@ -3815,6 +3816,15 @@ export class SurveyModel extends Base
       return this.getLocString("questionsProgressText")["format"](
         info.requiredAnsweredQuestionCount,
         info.requiredQuestionCount
+      );
+    }
+    if (type === "requiredquestionspercent") {
+      let percentValue = 0;
+      if (info.requiredAnsweredQuestionCount > 0) {
+        percentValue = Math.round((info.requiredAnsweredQuestionCount / info.requiredQuestionCount) * 100);
+      }
+      return this.getLocString("questionsPercentProgressText")["format"](
+        percentValue
       );
     }
     if (type === "correctquestions") {
