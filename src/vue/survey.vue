@@ -42,7 +42,7 @@
           <div :class="css.body">
             <component
               v-if="survey.isShowProgressBarOnTop"
-              :is="'sv-progress-' + survey.progressBarType.toLowerCase()"
+              :is="'sv-progress-' + survey.progressBarType"
               :survey="survey"
               :css="css"
             />
