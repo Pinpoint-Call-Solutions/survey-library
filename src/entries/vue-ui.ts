@@ -50,11 +50,11 @@ export { FlowPanel } from "../vue/flowpanel.vue";
 export { FlowPanelElement } from "../vue/flowpanelelement.vue";
 export { Row } from "../vue/row.vue";
 export { ElementHeader } from "../vue/elementheader.vue";
-export { QuestionImage } from "../vue/image.vue";
+// export { QuestionImage } from "../vue/image.vue";
 // export { SignaturePad } from "../vue/signaturepad.vue";
 export { SurveyHeader } from "../vue/header.vue";
-export { Custom } from "../vue/custom.vue";
-export { Composite } from "../vue/composite.vue";
+// export { Custom } from "../vue/custom.vue";
+// export { Composite } from "../vue/composite.vue";
 
 export { TitleContent } from "../vue/titlecontent.vue";
 export { TitleActions } from "../vue/components/title-actions/title-actions.vue";
